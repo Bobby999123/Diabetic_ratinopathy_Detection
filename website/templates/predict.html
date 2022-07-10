@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Diabetic Retinopathy Detection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/assets/img/title.jpg" rel="icon">
+  <link href="../static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+
+  <!-- Template Main CSS File -->
+  <link href="../static/assets/css/style.css" rel="stylesheet">
+  <link href="../static/assets/css/predict.css" rel="stylesheet">
+
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    var x=[]
+     x[0]=parseInt("{{pred1}}")
+     x[1]=parseInt ("{{pred2}}")
+     x[2]= parseInt ("{{pred3}}")
+     x[3]= parseInt ("{{pred4}}")
+     x[4]= parseInt ("{{pred5}}")
+     x[5]= parseInt ("{{pred6}}")
+     x[6]= parseInt ("{{pred7}}")
+     x[7]= parseInt ("{{pred8}}")
+     x[8]= parseInt ("{{pred9}}")
+     x[9]= parseInt ("{{pred10}})")
+     console.log(x)
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart1);
+    google.charts.setOnLoadCallback(drawChart2);
+    google.charts.setOnLoadCallback(barchart1);
+    google.charts.setOnLoadCallback(barchart2);
+    google.charts.setOnLoadCallback(areachart1);
+    google.charts.setOnLoadCallback(areachart2);
+
+
+
+    function drawChart1() {
+      var data = google.visualization.arrayToDataTable([
+      ['Stage', 'Chance'],
+      ['NO_Dr',     x[0]],
+      ['Mild',      x[1]],
+      ['Moderate',  x[2]],
+      ['Severe', x[3]],
+      ['Proliferate_Dr',  x[4]]
+      ]);
+
+      var options = {
+        title: '5 DR Stages ',
+        is3D: true,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+      chart.draw(data, options);
+    }
+
+    function drawChart2() {
+      var data = google.visualization.arrayToDataTable([
+        ['Stage', 'Chance'],
+        ['NO_Dr',     x[5]],
+        ['Mild',      x[6]],
+        ['Moderate',  x[7]],
+        ['Severe', x[8]],
+        ['Proliferate_Dr',  x[9]]
+      ]);
+
+      var options = {
+        title: '5 DR Stages ',
+        is3D: true,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d2'));
+      chart.draw(data, options);
+    }
+
+    // For the Barchart Function 
+    function barchart2() {
+      var data = google.visualization.arrayToDataTable([
+        ["Element", "Density", { role: "style" } ],
+        ["NO_DR", x[5], "#b87333"],
+        ["Mild", x[6], "silver"],
+        ["Moderate", x[7], "gold"],
+        ["Severe", x[8], "color: #e5e4e2"],
+        ["Proliferate_Dr", x[9], "color: #e5e4e2"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Image 2 DR Stages",
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values2"));
+      chart.draw(view, options);
+  }
+
+   // For the Barchart Function 
+   function barchart1() {
+    var data = google.visualization.arrayToDataTable([
+      ["Element", "Density", { role: "style" } ],
+      ["NO_DR", x[0], "#b87333"],
+      ["Mild", x[1], "silver"],
+      ["Moderate", x[2], "gold"],
+      ["Severe", x[3], "color: #e5e4e2"],
+      ["Proliferate_Dr", x[4], "color: #e5e4e2"]
+    ]);
+
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1,
+                     { calc: "stringify",
+                       sourceColumn: 1,
+                       type: "string",
+                       role: "annotation" },
+                     2]);
+
+    var options = {
+      title: "Image 1 DR Stages",
+      bar: {groupWidth: "95%"},
+      legend: { position: "none" },
+    };
+    var chart = new google.visualization.BarChart(document.getElementById("barchart_values1"));
+    chart.draw(view, options);
+}
+
+function areachart1() {
+  var data = google.visualization.arrayToDataTable([
+    ['Stage', 'Chances' ],
+    ['No_Dr',  x[0]  ],
+    ['Mild',  x[1]],
+    ['Moderate',  x[2] ],
+    ['Severe',  x[3]],
+    ['Severe',  x[4]],
+  ]);
+
+  var options = {
+    title: 'Stages Distrubution',
+    hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+    vAxis: {minValue: 0}
+  };
+
+  var chart = new google.visualization.AreaChart(document.getElementById('area_chart1'));
+  chart.draw(data, options);
+}
+
+function areachart2() {
+  var data = google.visualization.arrayToDataTable([
+    ['Stage', 'Chances' ],
+    ['No_Dr',  x[5]  ],
+    ['Mild',  x[6]],
+    ['Moderate',  x[7] ],
+    ['Severe',  x[8]],
+    ['Severe',  x[9]],
+  ]);
+
+  var options = {
+    title: 'Stages Distrubution',
+    hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
+    vAxis: {minValue: 0}
+  };
+
+  var chart = new google.visualization.AreaChart(document.getElementById('area_chart2'));
+  chart.draw(data, options);
+}
+  </script>
+
+</head>
+<body>
+
+     <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center ">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i >email:</i> <a href="mailto:vaibhavraopalri@gmail.com">DRD_Solution@gmail.com</a>
+        <i class="">Contact No:</i> +91 9892309293
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="/home">DRD Software</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="/home#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#predict_section">Predict</a></li>
+          <li><a class="nav-link scrollto" href="#analysis">Model Analysis</a></li>
+          <!-- <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#departments">EyeCare</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="https://forms.gle/K83ck5CAurkxjc9k6" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+    </div>
+  </header><!-- End Header -->
+  <section id="predict_section">
+<div class="heading">
+  <h3>Choose an Image for Detection of Diabetic Retinopathy Pathy</h3>
+</div>
+<div style="left: 30px; top: 40px; position:relative">
+
+    <form action="/predict" method="POST" enctype="multipart/form-data" >
+      <div class="form-group center">
+        <label for="image1">
+          <input class="form-control form_input " placeholder="Choose Left Eye Image " type="file" name="img1" id="image1">
+    
+        </label>
+        <label for="image2">
+          <input  class="form-control form_input"   type="file" name="img2" id="image2" placeholder="Choose Right Eye Image ">
+    
+        </label>
+        <input  class="form-control predict_btn" type="submit" value="Predict">
+      </form>
+    </div>
+</div>
+</section>
+<hr>
+<div id="resultdiv" class="result_column">
+  < <div class="result_item">
+  <h2 class="result_heading">Image 1 Result</h2>
+  <p>Categoires Wise Prediciton</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Chances(%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NO_DR</td>
+        <td>{{pred1}}</td>
+      </tr>
+      <tr>
+        <td>Mild</td>
+        <td>{{pred2}}</td>
+
+      </tr>
+      <tr>
+        <td>Moderate</td>
+        <td>{{pred3}}</td>
+     
+      </tr>
+
+      <tr>
+        <td>Severe</td>
+        <td>{{pred4}}</td>
+      </tr>
+
+      <tr>
+        <td>Proliferate_DR</td>
+        <td>{{pred5}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  
+ <div class="result_item" >
+  <h2 class="result_heading">Image 2 Result</h2>
+  <p>Categoires Wise Prediciton</p>            
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Chances(%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>NO_DR</td>
+        <td>{{pred6}}</td>
+      </tr>
+      <tr>
+        <td>Mild</td>
+        <td>{{pred7}}</td>
+
+      </tr>
+      <tr>
+        <td>Moderate</td>
+        <td>{{pred8}}</td>
+     
+      </tr>
+
+      <tr>
+        <td>Severe</td>
+        <td>{{pred9}}</td>
+      </tr>
+
+      <tr>
+        <td>Proliferate_DR</td>
+        <td>{{pred10}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
+
+<div id="analysis" class="acc_css">
+  <div class="acc_item">
+    <h4 class="analysis_heading">Model Accuracy Relationship</h4>
+    <img src="../static/assets/img/modelAccuracy.JPG" width="500" height="300" class="acc_img">
+  </div>
+  
+  <div class="acc_item">
+    <h4 class="analysis_heading"> Model Loss Relationship</h4>
+    <img src="../static/assets/img/modelLoss.JPG" width="500" height="300" class="acc_img">
+  </div>
+
+</div >
+<h2 class="result_heading">Pie Chart </h2>
+<div class="visual-1">
+  <div id="piechart_3d"  class="visual-item1"></div>
+  <div id="piechart_3d2" class="visual-item1"></div>
+
+</div>
+
+</div >
+<h2 class="result_heading">Barchart </h2>
+<div class="visual-1">
+  <div id="barchart_values1"  class="visual-item1"></div>
+  <div id="barchart_values2" class="visual-item1"></div>
+</div>
+
+</div >
+<h2 class="result_heading">Areachart </h2>
+<div class="visual-1">
+  <div id="area_chart1"  class="visual-item1"></div>
+  <div id="area_chart2" class="visual-item1"></div>
+</div>
+
+<!-- ======= Footer ======= -->
+
+<footer class="footer_css">
+  <div class="container d-md-flex py-4">
+    <div class="me-md-auto text-center text-md-start">
+      <div class="copyright">
+        &copy; <strong><span>DRD-SolutionLab</span></strong>. All Rights Reserved 2021
+      </div>
+      <div class="credits">
+        Designed by <a href="vaibhavraopalri@gmail.com">NBSV</a>
+      </div>
+    </div>
+    <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <a href="mailto:vaibhavraopalri@gmail.com" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="mailto:vaibhavraopalri@gmail.com" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="mailto:vaibhavraopalri@gmail.com" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="mailto:vaibhavraopalri@gmail.com" class="google-plus"><i class="bx bxl-skype"></i></a>
+      <a href="mailto:vaibhavraopalri@gmail.com" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+
+    <!-- Vendor JS Files -->
+    <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../static/assets/vendor/php-email-form/validate.js"></script>
+    <script src="../static/assets/vendor/purecounter/purecounter.js"></script>
+    <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="../static/assets/js/main.js"></script>
+
+</body>
+</html>

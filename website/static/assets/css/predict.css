@@ -1,0 +1,118 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+Overflow-x:scroll;
+Overflow-y:scroll; 
+  }
+.heading
+{
+    text-align: center;
+    position: relative;
+    top:30px;
+    color: #2c4964;
+    font-weight: 600;
+}
+.center{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.predict_btn{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #2c4964;
+    color: white;
+    width: 150px;
+}
+.predict_btn:hover{
+    background-color: grey;
+    
+}
+.form_input{
+    margin: 10px;
+    border:2px solid #2c4964;
+}
+.footer_css
+{
+    background-color:#f1f7fd;
+    width: 100%;
+    bottom: 0px;
+    display: block;
+    margin-bottom: 0px;
+}
+.result_heading{
+    position: relative;
+    top:2px;
+    text-align: center;
+    color:#2c4964;
+    font-weight: 700;
+}
+.acc_css{
+    display: flex;
+    /* grid-template-columns: auto auto; */
+    margin-left: 30px;
+}
+.loss_css{
+    display: inline-block;
+    position: relative;
+  }
+  .analysis_heading{
+    position: relative;
+    top:2px;
+    text-align: center;
+    color:#2c4964;
+    font-weight: 700;
+      
+  }
+  .result_column{
+      display: flex;
+      /* grid-template-columns: auto auto; */
+      margin-left: 30px;
+       
+  }
+.result_item{
+    height:350px;
+    /* background-color: azure; */
+    margin: 50px;
+    border: 2px solid #020e1a;
+    width: 600px;
+}
+.acc_item{
+      height:350px;
+    /* background-color: azure; */
+    position: relative;
+    margin:50px;
+    border: 2px solid #020e1a;
+    width: 600px;
+}
+.acc_img{
+    position: relative;
+    padding-left: 24px;
+   align-content: center;
+}
+.visual-1{
+    position: relative;
+    border: 2px solid #020e1a;
+    display: flex;
+    margin: 50px;
+    height: 355px;
+}
+
+.visual-item1{
+    height:350px;
+    /* background-color: azure; */
+    position: relative;
+    margin:50px;
+    padding-left: 20px;
+    width: 500px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    left:102px;
+    zoom: 100%
+    
+}

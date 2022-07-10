@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Diabetic Retinopathy Detection</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/assets/img/title.jpg" rel="icon">
+  <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  
+  <link href="../static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  ======= Top Bar =======
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i >email:</i> <a href="mailto:vaibhavraopalri@gmail.com">DRD_Solution@gmail.com</a>
+        <i class="">Contact No:</i> +91 9892309293
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="mailto:vaibhavraopalri@gmail.com" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="mailto:vaibhavraopalri@gmail.com" class="facebook"><i class="bi bi-facebook"></i></a>
+        <!-- <a href="mailto:vaibhavraopalri@gmail.com" class="instagram"><i class="bi bi-instagram"></i></a> -->
+        <a href="mailto:vaibhavraopalri@gmail.com" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="home.html">DRD Software</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#departments">EyeCare</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" style="color:red" href="/logout">Logout</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="https://forms.gle/K83ck5CAurkxjc9k6" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1 >Welcome to DRD-SolutionLab</h1>
+      <h2>We are Serving Vision for life, Care your Eyes  </h2>
+      <a href="#about" class="btn-get-started scrollto">Get Started</a>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Why Choose DRD-Software?</h3>
+              <p>
+                We Provide better a solution that matter for your eye vision. We try to predict whether a person is suffering from Diabetic Retinopathy
+                Disease or not. 
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <!-- <i class="bx bx-receipt"></i> -->
+                    <h4>Making new technologies accessible to every doctor
+                    </h4>
+                    <p>
+                      Delivering new, assistive technologies that will empower doctors to better serve their patients.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <!-- <i class="bx bx-cube-alt"></i> -->
+                    <h4>What exactly is Diabetic Retinopathy?</h4>
+                    <p>
+                      Diabetic retinopathy is a diabetes complication that affects eyes. 
+                      It's caused by damage to the blood vessels of the light-sensitive tissue at the back of the eye (retina).</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <!-- <i class="bx bx-images"></i> -->
+                    <h4>Our Approach</h4>
+                    <p>We wanted to find out a way to overcome this problem and thus using the help of convolutional neural network (ConvNet), 
+                      we are able to detect multiple stages of severity for Diabetic Retinopathy.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 video-box d-flex justify-content-center align-items-stretch position-relative">
+            <a href="https://youtu.be/sQ-0RkPu35o" class="btn btn-primary video-box  video-btn"></a>
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>What is Diabetic Retinopathy ?</h3>
+            <p>Diabetic retinopathy, also known as diabetic eye disease, is a medical condition in which damage occurs to the retina due to diabetes mellitus. It is a leading cause of blindness.</p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-fingerprint"></i></div>
+              <h4 class="title"><a href="">Situation In India</a></h4>
+              <p class="description">Currently, In India diabetes is a disease that affects over 65 million persons in India. To spread awareness among people major hospitals in India organizes the free eye checkup camps in villages where people can get their eye checkup for free.</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-gift"></i></div>
+              <h4 class="title"><a href="">Cause of Diabetic Retinopathy</a></h4>
+              <p class="description">Diabetic retinopathy is caused by high blood sugar due to diabetes. Over time,
+                 having too much sugar in your blood can damage your retina — the part of your eye that detects light and sends signals to your brain through a nerve in the back of your eye (optic nerve).</p>
+            </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="bx bx-atom"></i></div>
+              <h4 class="title"><a href="">Our Solution</a></h4>
+              <p class="description">This software use CNN  based machine learning Model and digital image processing which helps in predicting whether a person has DR or non DR. The proposal is to create an application based interface that 
+                visualizes the prediction of patients using the Eyepacs Dataset.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <span> 77 Million</span>
+              <p>Total Diabetic patients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <span>16.9 %</span>
+              <p>Retinopathy patients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <span>12</span>
+              <p>Research Institue</p>
+            </div>
+          </div>
+
+         
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+          <p>We have developed a computer based model using convolutional neural network which can classify whether a person a suffering from retinopathy or not. This model used layering mechanism to sub dividing the images into different parts. We have used different python module for building the neural network for example:</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="https://www.eyepacs.com/data-analysis">EyePacs Dataset</a></h4>
+              <p>The Diabetic Retinopathy database used in this study is taken from the California Healthcare Foundation. 35000 Retinal images were provided by EyePACS, a free platform for retinopathy screening.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4><a href="/predict">Explore Our Solution</a></h4>
+              <p>A complete Diabetic Retinopathy Detection Solution. Please Click on Explore Button. This software used CNN basesd approach for detecting the retinopathy disease with 5 Different stages.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4><a href="">Visualization Feature</a></h4>
+              <p>We have provided different type of visualization like barchart , area chart , pie chart for better understaning of the prediction result. It improves user experience</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Appointment Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Make an Appointment</h2>
+          <p>Didn't find what you 'are looking for ? We are Here and we 'd Love to Hear From you. Conact us on below details we will try our best to get back to you soon</p>
+        </div>
+
+        <form action="" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3 mt-md-0">
+              <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="datetime" name="date" class="form-control datepicker" id="date" placeholder="Appointment Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="department" id="department" class="form-select">
+                <option value="">Select Department</option>
+                <option value="Department 1">Eye Department </option>
+              </select>
+              <div class="validate"></div>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="doctor" id="doctor" class="form-select">
+                <option value="">Select Doctor</option>
+                <option value="Doctor 1">Doctor 1</option>
+              </select>
+              <div class="validate"></div>
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message (Optional)"></textarea>
+            <div class="validate"></div>
+          </div>
+          <div class="mb-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+          </div>
+          <a href="https://forms.gle/K83ck5CAurkxjc9k6" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+        </form>
+        
+
+      </div>
+    </section><!-- End Appointment Section -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>EyeCare</h2>
+          <p>There are things you can do to help keep your eyes healthy and make sure you are seeing your bestEye problems can be easily prevented if you practice essential eye care habits everyday. Surprisingly, they are very practical and easy to accomplish yet they tend to be the most neglected.
+            .</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-9 mt-4 mt-lg-0">
+            <div class="tab-content">
+              <div class="tab-pane  active show" id="tab-5">
+                <div class="row">
+                  <div class="col-lg-8 details order-2 order-lg-1">
+                    <h3>Various measure which can protect anyone from having Diabetic Retinopathy Disease.</h3>
+                    <ol>
+                      <li>Come in for a dilated eye exam at least once a year.</li>
+                     <li> Manage your blood sugar like a professional.</li>
+                     <li>Maintain blood pressure and keep a lid on your cholesterol.</li>
+                      <li>Eat healthy and exercise regularly.</li>
+                    </ol> 
+                  </div>
+                  <div class="col-lg-4 text-center order-1 order-lg-2">
+                    <img src="assets/img/departments-5.jpg" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Can the new treatments provide a definitive cure for diabetic retinopathy and diabetic macular oedema? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  No, although the treatments developed in recent years have brought about a considerable improvement in the lifestyle of these patients because they can decelerate 
+                  disease progression and reduce vision loss.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Are There different types of diabetic Retinopathy? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">What can I do to help prevent diabetic retinopathy? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes. Depending on the severity, there are different stages of the disease and it can also develop into diabetic macular oedema.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">Could I develop diabetic retinopathy even though my diabetes is always well-controlled? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes. Many patients who have had type 1 diabetes for over 20 years can develop diabetic retinopathy. 
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Could I have mild diabetic retinopathy and yet still lose my vision? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Yes. Classifying diabetic retinopathy as mild refers to the fact that it only affects small blood vessels.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+
+    
+
+    <!-- ======= Gallery Section ======= -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <p>Diabetic Retinopathy have 5 different statges 1. NO_Dr 2.Mild  3.Moderate 4.Severe 5.profileriate DR. Here Some images are attached of eye retina belongs to different classes of th Diabetic Retinopathy. </p>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row no-gutters">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="../static/assets/img/gallery/20_left.jpeg" class="galelry-lightbox">
+                <img src="../static/assets/img/gallery/20_left.jpeg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="../static/assets/img/gallery/560_right.jpeg" class="galelry-lightbox">
+                <img src="../static/assets/img/gallery/560_right.jpeg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="../static/assets/img/gallery/639_left.jpeg" class="galelry-lightbox">
+                <img src="../static/assets/img/gallery/639_left.jpeg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="../static/assets/img/gallery/20_right.jpeg" class="galelry-lightbox">
+                <img src="../static/assets/img/gallery/20_right.jpeg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="../static/assets/img/gallery/33_left.jpeg" class="galelry-lightbox">
+                <img src="../static/assets/img/gallery/33_left.jpeg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="../static/assets/img/gallery/56_left.jpeg" class="galelry-lightbox">
+                <img src="../static/assets/img/gallery/56_left.jpeg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="../static/assets/img/gallery/33_left.jpeg" class="galelry-lightbox">
+                <img src="../static/assets/img/gallery/33_left.jpeg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="gallery-item">
+              <a href="../static/assets/img/gallery/681_righ.jpeg" class="galelry-lightbox">
+                <img src="../static/assets/img/gallery/681_right.jpeg" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+    </section><!-- End Gallery Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Didn't find what you 'are looking for ? We are Here and we 'd Love to Hear From you. Conact us on below details we will try our best to get back to you soon</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Chandigarh University, Mohali, Punjab</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>drd_solution@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 8765312345</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>DRD Solution lab</h3>
+            <p>
+              A-12 <br>
+              Chandigarh University<br>
+              Mohali,Punjab <br><br>
+              <strong>Phone:</strong> +1 6091548345<br>
+              <strong>Email:</strong> drd_solution@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Eye Care</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Make Appointment</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; <strong><span>DRD-SolutionLab</span></strong>. All Rights Reserved 2021
+        </div>
+        <div class="credits">
+          Designed by <a href="vaibhavraopalri@gmail.com">NBSV</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="mailtto:vaibhavraopalri@gmail.com" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="mailtto:vaibhavraopalri@gmail.com" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="mailto:vaibhavraopalri@gmail.com" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="mailto:vaibhavraopalri@gmail.com" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="../static/assets/vendor/purecounter/purecounter.js"></script>
+  <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+
+</body>
+
+</html>
